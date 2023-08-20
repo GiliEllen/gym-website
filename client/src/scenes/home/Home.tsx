@@ -1,6 +1,6 @@
 import { SelectedPage } from "@/shared/types";
 import ActionButton from "@/shared/ActionButton";
-import HomePageText from "@/assets/HomePageText.png";
+import HomePageText from "@/assets/logo-lb-no-bg-hr.svg";
 import HomePageGraphic from "@/assets/HomePageGraphic.png";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/shared/animations";

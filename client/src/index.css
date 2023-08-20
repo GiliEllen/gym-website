@@ -9,4 +9,5 @@ html, body, #root, .app {
     width: 100%;
     font-family: 'DM Sans', sans-serif;
     @apply text-gray-500;
+    background-color: rgb(246, 254, 255);
 }

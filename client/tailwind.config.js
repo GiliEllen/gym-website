@@ -4,19 +4,20 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "gray-20": "#F8F4EB",
-        "gray-50": "#EFE6E6",
-        "gray-100": "#DFCCCC",
-        "gray-500": "#5E0000",
-        "primary-100": "#FFE1E0",
-        "primary-300": "#FFA6A3",
-        "primary-500": "#FF6B66",
-        "secondary-400": "#FFCD5B",
-        "secondary-500": "#FFC132",
+        "gray-20": "#e1fcf9",
+        // "gray-20": "#F8F4EB",
+        "gray-50": "#e6ecef",
+        "gray-100": "#ccdbdf",
+        "gray-500": "#00035e",
+        "primary-100": "#bcefff",
+        "primary-300": "#a3cfff",
+        "primary-500": "#667fff",
+        "secondary-400": "#5bfaff",
+        "secondary-500": "#77D4FC",
       },
       backgroundImage: (theme) => ({
         "gradient-yellowred":
-          "linear-gradient(90deg, #FF616A 0%, #FFC837 100%)",
+          "linear-gradient(90deg, #61e7ff 0%, #379bff 100%)",
         "mobile-home": "url('./assets/HomePageGraphic.png')",
       }),
       fontFamily: {
