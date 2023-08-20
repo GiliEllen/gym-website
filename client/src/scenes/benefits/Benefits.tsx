@@ -8,7 +8,8 @@ import {
 import { motion } from "framer-motion";
 import Benefit from "./Benefit";
 import ActionButton from "@/shared/ActionButton";
-import BenefitPageGraphic from "@/assets/BenefitsPageGraphic.png"
+import BenefitPageGraphic from "@/assets/BenefitsPageGraphic.png";
+import { fadeIn } from "@/shared/animations";
 
 const benefits: Array<BenefitType> = [
   {
@@ -86,7 +87,11 @@ const Benefits = ({ setSelectedPage }: Props) => {
       {/* GRAPHICS AND DESCRIPTION */}
       <div className="mt-16 items-center justify-between gap-20 md:mt-28 md:flex">
         {/* GRAPHIC */}
-        <img className="mx-auto" alt="benefit-page-graphic" src={BenefitPageGraphic}/>
+        <img
+          className="mx-auto"
+          alt="benefit-page-graphic"
+          src={BenefitPageGraphic}
+        />
 
         {/* DESCRIPTION */}
         <div>
@@ -94,14 +99,10 @@ const Benefits = ({ setSelectedPage }: Props) => {
           <div className="relative">
             <div className="before:absolute before:-top-20 before:-left-20 before:z-[1] before:content-abstractwaves">
               <motion.div
-               initial="hidden"
-               whileInView="visible"
-               viewport={{ once: true, amount: 0.5 }}
-               transition={{ duration: 0.5 }}
-               variants={{
-                 hidden: { opacity: 0, x: 50 },
-                 visible: { opacity: 1, x: 0 },
-               }}
+                variants={fadeIn("left", "spring", 0.2, 1)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
               >
                 <HText>
                   Millios of happy <span className="text-primary-500">FIT</span>
@@ -111,14 +112,11 @@ const Benefits = ({ setSelectedPage }: Props) => {
           </div>
           {/* DESCRIPTION */}
           <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{delay: 0.2, duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, x: 50 },
-            visible: { opacity: 1, x: 0 },
-          }}>
+            variants={fadeIn("left", "spring", 0.2, 1)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+          >
             <p className="my-5">this is paragraph A</p>
             <p className="mb-5">and this is B</p>
           </motion.div>
@@ -127,7 +125,9 @@ const Benefits = ({ setSelectedPage }: Props) => {
 
           <div className="relative mt-16">
             <div className="before:absolute before:-bottom-20 before:right-40 before:z-[-1] before:content-sparkles">
-              <ActionButton setSelectedPage={setSelectedPage}>Learn More</ActionButton>
+              <ActionButton setSelectedPage={setSelectedPage}>
+                Learn More
+              </ActionButton>
             </div>
           </div>
         </div>

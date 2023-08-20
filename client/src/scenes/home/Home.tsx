@@ -3,6 +3,7 @@ import ActionButton from "@/shared/ActionButton";
 import HomePageText from "@/assets/HomePageText.png";
 import HomePageGraphic from "@/assets/HomePageGraphic.png";
 import { motion } from "framer-motion";
+import { fadeIn } from "@/shared/animations";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -22,14 +23,10 @@ const Home = ({ setSelectedPage }: Props) => {
           {/* HEADING */}
           <motion.div
             className="md:-mt-20"
+            variants={fadeIn("right", "spring", 0, 1, "after")}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.5 }}
-            variants={{
-              hidden: { opacity: 0, x: -50 },
-              visible: { opacity: 1, x: 0 },
-            }}
           >
             <div className="relative">
               <div className="before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext">
@@ -40,14 +37,11 @@ const Home = ({ setSelectedPage }: Props) => {
           </motion.div>
           {/* ACTIONS */}
           <motion.div className="mt-8 flex items-center gap-8"
+          variants={fadeIn("right", "spring", 0.2, 1)}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          transition={{delay: 0.2, duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, x: -50 },
-            visible: { opacity: 1, x: 0 },
-          }}>
+          >
             <ActionButton setSelectedPage={setSelectedPage}>
               Learn More
             </ActionButton>
