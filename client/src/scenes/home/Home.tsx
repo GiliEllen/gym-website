@@ -27,18 +27,20 @@ const Home = ({ setSelectedPage }: Props) => {
             <p className="mt-8 text-sm">Gym Text</p>
           </div>
           {/* ACTIONS */}
-          <div className="">
+          <div className="mt-8 flex items-center gap-8">
             <ActionButton setSelectedPage={setSelectedPage}>
               Learn More
             </ActionButton>
           </div>
         </div>
         {/* IMAGE */}
-        <div>
-            <img alt="home-page-graphic" src={HomePageGraphic}/>
+        <div
+          className="flex basis-3/5 justify-center md:z-10
+        md:ml-40 md:mt-16 md:justify-items-end"
+        >
+          <img alt="home-page-graphic" src={HomePageGraphic} />
         </div>
       </div>
-
     </section>
   );
 };
