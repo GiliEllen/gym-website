@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
-import ContactUsPageGraphic from "@/assets/ContactUsPageGraphic.png";
+import ContactUsPageGraphic from "@/assets/tyler-nix-Y1drF0Y3Oe0-unsplash.jpg";
 import HText from "@/shared/HText";
 
 type Props = {
@@ -146,7 +146,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
           >
             <div className="w-full before:absolute before:-bottom-20 before:-right-10 before:z-[-1] md:before:content-evolvetext">
               <img
-                className="w-full"
+                className="w-full rounded-lg bg-cover object-center"
                 alt="contact-us-page-graphic"
                 src={ContactUsPageGraphic}
               />

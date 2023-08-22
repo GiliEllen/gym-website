@@ -26,8 +26,9 @@ module.exports = {
       },
       content: {
         evolvetext: "url('./assets/EvolveText.png')",
+        evolvetextlb: "url('./assets/EvolveText-lb.png')",
         abstractwaves: "url('./assets/AbstractWaves.png')",
-        sparkles: "url('./assets/Sparkles.png')",
+        sparkles: "url('./assets/shape3.png')",
         circles: "url('./assets/Circles.png')",
       },
     },

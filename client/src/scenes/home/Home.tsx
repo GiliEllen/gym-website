@@ -1,7 +1,7 @@
 import { SelectedPage } from "@/shared/types";
 import ActionButton from "@/shared/ActionButton";
 import HomePageText from "@/assets/logo-lb-no-bg-hr.svg";
-import HomePageGraphic from "@/assets/HomePageGraphic.png";
+import HomePageGraphic from "@/assets/homePage-graphic.png";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/shared/animations";
 
@@ -10,13 +10,12 @@ type Props = {
 };
 
 const Home = ({ setSelectedPage }: Props) => {
-
   return (
     <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-4">
       {/* IMAGE AND MAIN HEADER */}
-      <motion.div 
-      className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6"
-      onViewportEnter={() =>setSelectedPage(SelectedPage.Home)}
+      <motion.div
+        className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6"
+        onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
         {/* MAIN HEADER */}
         <div className="z-10 mt-32 md:basis-3/5">
@@ -29,18 +28,26 @@ const Home = ({ setSelectedPage }: Props) => {
             viewport={{ once: true, amount: 0.5 }}
           >
             <div className="relative">
-              <div className="before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext">
+              <div className="before:absolute before:-top-20 before:-left-10 before:z-[-1] md:before:content-evolvetext">
                 <img alt="home-page-text" src={HomePageText} />
               </div>
             </div>
-            <p className="mt-8 text-sm">Gym Text</p>
+            <p className="mt-8 text-sm">
+              Introducing Nofar full Body Studio – Where Strength Meets Grace
+              Discover a new realm of fitness designed exclusively for women.
+              Our gym provides a comprehensive approach to wellness. Unleash
+              your strength, elevate your heart rate and find balance Join us in
+              this empowering space where women uplift each other to achieve
+              their best selves. Grand Opening soon!
+            </p>
           </motion.div>
           {/* ACTIONS */}
-          <motion.div className="mt-8 flex items-center gap-8"
-          variants={fadeIn("right", "spring", 0.2, 1)}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
+          <motion.div
+            className="mt-8 flex items-center gap-8"
+            variants={fadeIn("right", "spring", 0.2, 1)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
           >
             <ActionButton setSelectedPage={setSelectedPage}>
               Learn More

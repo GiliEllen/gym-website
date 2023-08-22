@@ -2,33 +2,36 @@ import ActionButton from "@/shared/ActionButton";
 import HText from "@/shared/HText";
 import { BenefitType, SelectedPage } from "@/shared/types";
 import {
-  HomeModernIcon,
+  SparklesIcon,
   UserGroupIcon,
   AcademicCapIcon,
 } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
-import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png";
+import BenefitsPageGraphic from "@/assets/benefits-graphic.png"
+import Sparkles from "@/assets/shape3.png"
+import Waves from "@/assets/shape1.png"
 import Benefit from "./Benefit";
 import { fadeIn } from "@/shared/animations";
 
+
 const benefits: Array<BenefitType> = [
   {
-    icon: <HomeModernIcon className="h-6 w-6" />,
-    title: "State of the Art Facilities",
+    icon: <SparklesIcon className="h-6 w-6" />,
+    title: "Choose the rythm that fits YOU",
     description:
-      "Neque adipiscing amet amet enim. Feugiat dolor enim fermentum in a in lectus pellentesque. Ullamcorper et.",
+      "Choose between the slow-flow class, the high-paced step class or the strength class - Maybe try all three!",
   },
   {
     icon: <UserGroupIcon className="h-6 w-6" />,
-    title: "100's of Diverse Classes",
+    title: "You are in this together!",
     description:
-      "Eu ipsum id egestas risus tempus enim semper felis quis. Nec consectetur ac venenatis facilisi est. Eget ac turpis id.",
+      "You are part of a group that tries to be their better selfs - you are not alone in this!",
   },
   {
     icon: <AcademicCapIcon className="h-6 w-6" />,
     title: "Expert and Pro Trainers",
     description:
-      "Fusce vestibulum aliquam ut cras. Nisl lectus egestas sapien nisl. Lacus at mi sit pellentesque. Congue parturient.",
+      "You can focus on the best You - and let our mentors do the hard work!",
   },
 ];
 
@@ -97,7 +100,8 @@ const Benefits = ({ setSelectedPage }: Props) => {
           <div>
             {/* TITLE */}
             <div className="relative">
-              <div className="before:absolute before:-top-20 before:-left-20 before:z-[1] before:content-abstractwaves">
+              <img src={Waves} alt="waves-element" className="absolute w-52 -right-32 -top-20 z-[-1]"/>
+              {/* <div className="before:absolute before:-top-20 before:-left-20 before:z-[1] before:content-abstractwaves"> */}
                 <motion.div
                   variants={fadeIn("left", "spring", 0, 1)}
                   initial="hidden"
@@ -105,11 +109,11 @@ const Benefits = ({ setSelectedPage }: Props) => {
                   viewport={{ once: true, amount: 0.5 }}
                 >
                   <HText>
-                    MILLIONS OF HAPPY MEMBERS GETTING{" "}
-                    <span className="text-primary-500">FIT</span>
+                    TRUE CHANGE COMES FROM{" "}
+                    <span className="text-primary-500">YOU</span>
                   </HText>
                 </motion.div>
-              </div>
+              {/* </div> */}
             </div>
 
             {/* DESCRIPT */}
@@ -120,28 +124,28 @@ const Benefits = ({ setSelectedPage }: Props) => {
               viewport={{ once: true, amount: 0.5 }}
             >
               <p className="my-5">
-                Nascetur aenean massa auctor tincidunt. Iaculis potenti amet
-                egestas ultrices consectetur adipiscing ultricies enim. Pulvinar
-                fames vitae vitae quis. Quis amet vulputate tincidunt at in
-                nulla nec. Consequat sed facilisis dui sit egestas ultrices
-                tellus. Ullamcorper arcu id pretium sapien proin integer nisl.
-                Felis orci diam odio.
+                Full Body Studio transcends the ordinary – it's a nurturing
+                community that encompasses every facet of a woman's journey. I'm not just a trainer; 
+                I'm a mentor dedicated to guiding your transformation. True empowerment
+                springs from within, which is why we offer physical training and
+                workshops focusing on mindset, self-care, and growth.
               </p>
               <p className="mb-5">
-                Fringilla a sed at suspendisse ut enim volutpat. Rhoncus vel est
-                tellus quam porttitor. Mauris velit euismod elementum arcu neque
-                facilisi. Amet semper tortor facilisis metus nibh. Rhoncus sit
-                enim mattis odio in risus nunc.
+                Here, members forge unwavering
+                motivation. Whether you're a fitness
+                enthusiast or new to wellness, Full Body Studio is a haven to
+                embrace your uniqueness, embarking on a path to a healthier,
+                happier you.
               </p>
             </motion.div>
 
             {/* BUTTON */}
             <div className="relative mt-16">
-              <div className="before:absolute before:-bottom-20 before:right-40 before:z-[-1] before:content-sparkles">
+              <img src={Sparkles} alt="sparkles-element" className="absolute w-32 left-52 -top-16"/>
                 <ActionButton setSelectedPage={setSelectedPage}>
                   Join Now
                 </ActionButton>
-              </div>
+
             </div>
           </div>
         </div>

@@ -1,46 +1,29 @@
 import { SelectedPage, ClassType } from "@/shared/types";
-import image1 from "@/assets/image1.png";
-import image2 from "@/assets/image2.png";
-import image3 from "@/assets/image3.png";
-import image4 from "@/assets/image4.png";
-import image5 from "@/assets/image5.png";
-import image6 from "@/assets/image6.png";
+import image1 from "@/assets/image01.jpg";
+import image2 from "@/assets/image02.jpg";
+import image3 from "@/assets/image03.jpg";
 import { motion } from "framer-motion";
 import HText from "@/shared/HText";
 import Class from "./Class";
 
 const classes: Array<ClassType> = [
   {
-    name: "Weight Training Classes",
+    name: "Strength Training Classes",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Full Body Studio offers a dynamic Strength Training class designed to sculpt and tone your body while boosting your confidence.",
     image: image1,
   },
   {
-    name: "Yoga Classes",
+    name: "Step Classes",
+    description:
+      "Our engaging Step Classes combine energetic choreography with cardio, giving you a high-energy workout that's both fun and effective.",
     image: image2,
-  },
-  {
-    name: "Ab Core Classes",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    image: image3,
-  },
-  {
-    name: "Adventure Classes",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    image: image4,
-  },
-  {
-    name: "Fitness Classes",
-    image: image5,
   },
   {
     name: "Training Classes",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    image: image6,
+      "Experience tranquility and flexibility in our Flow Classes, where the fusion of yoga and movement creates a harmonious blend of physical and mental wellness.",
+    image: image3,
   },
 ];
 
@@ -68,15 +51,12 @@ const OurClasses = ({ setSelectedPage }: Props) => {
           <div className="md:w-3/5">
             <HText>OUR CLASSES</HText>
             <p className="py-5">
-              Fringilla a sed at suspendisse ut enim volutpat. Rhoncus vel est
-              tellus quam porttitor. Mauris velit euismod elementum arcu neque
-              facilisi. Amet semper tortor facilisis metus nibh. Rhoncus sit
-              enim mattis odio in risus nunc.
+              Take a look at our classes
             </p>
           </div>
         </motion.div>
         <div className="mt-10 h-[353px] w-full overflow-x-auto overflow-y-hidden">
-          <ul className="w-[2800px] whitespace-nowrap">
+          <ul className="w-[1500px] whitespace-nowrap">
             {classes.map((item: ClassType, index) => (
               <Class
                 key={`${item.name}-${index}`}
