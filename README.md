@@ -13,7 +13,7 @@ Welcome to the Nofar Full Body Studio gym React project! This project aims to pr
 To get started with the project locally, follow these steps:
 
 1. Clone the repository:
-   git clone https://github.com/your-username/Nofar-Full-Body-Studio.git
+   git clone https://github.com/GiliEllen/gym-website
 
 2. Install dependencies:
    cd client
